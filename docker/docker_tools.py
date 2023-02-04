@@ -827,7 +827,7 @@ def _build_phase_1(
     )
     w2p_parent = Path(env.WEB2PY_PATH).parent
     xqt(
-        f"eatmydata wget --no-verbose https://mdipierro.pythonanywhere.com/examples/static/{WEB2PY_VERSION}/web2py_src.zip",
+        f"eatmydata wget --no-verbose https://mdipierro.pythonanywhere.com/examples/static/web2py_src.zip",
         "eatmydata unzip -q web2py_src.zip",
         "rm -f web2py_src.zip",
         cwd=w2p_parent,
