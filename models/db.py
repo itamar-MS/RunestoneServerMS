@@ -605,11 +605,11 @@ def _validateUser(username, password, fname, lname, email, course_name, line):
     cinfo = db(db.courses.course_name == course_name).select().first()
     if not cinfo:
         errors.append(f"Course {course_name} does not exist on line {line}")
-    match = re.search(r"""[!"#$%&'()*+,./:;<=>?@[\]^`{|}~ ]""", username)
-    if match:
-        errors.append(
-            f"""Username cannot contain a {match.group(0).replace(" ", "space")} on line {line}"""
-        )
+    # match = re.search(r"""[!"#$%&'()*+,./:;<=>?@[\]^`{|}~ ]""", username)
+    # if match:
+    #     errors.append(
+    #         f"""Username cannot contain a {match.group(0).replace(" ", "space")} on line {line}"""
+    #     )
     uinfo = db(db.auth_user.username == username).count()
     if uinfo > 0:
         errors.append(f"Username {username} already exists on line {line}")
