@@ -624,7 +624,7 @@ def _validateUser(username, password, fname, lname, email, course_name, line):
 
 def create_rs_token():
     d = dict(sub=auth.user.username)
-    expires = datetime.timedelta(days=30)
+    expires = datetime.timedelta(days=365)
     _create_access_token(d, expires=expires)
 
 
