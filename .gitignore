@@ -72,3 +72,5 @@ _builddoctrees
 docker/nginx/sites-available/runestone
 ready.txt
 books/*
+poetry.lock
+pyproject.toml
